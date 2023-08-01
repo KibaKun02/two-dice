@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(to right,darkred,red,yellow,white,skyblue,blue,darkblue);
+        width: 100%;
+        height: 120vh;
+        
+    }
+    #con {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px;
+        padding: 0px 30px 0px 120px;
+        
+    }
+    #con2{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px 0px 10px ;
+        margin-left:250px;
+        margin-right: 250px;
+        
+    }
+    #buttonfire{
+        border: 2px solid red ;
+        border-radius: 30%;
+        width: 150px;
+        box-shadow: 5px 5px 7px red;
+        font-style: italic;
+        color: darkred;
+        font-weight: bolder;
+    }
+    #buttonice{
+        border: 2px solid blue ;
+        border-radius: 30%;
+        width: 150px;
+        box-shadow: 5px 5px 7px blue;
+        font-style: italic;
+        color: darkred;
+        font-weight: bolder;
+    }
+    #buttonfire:hover{
+        color: yellow;
+        box-shadow: 7px 7px  10px yellow;
+    }
+    #buttonice:hover{
+        color:blue;
+        box-shadow: 7px 7px 10px darkblue;
+    }
+    #buttonfire:active{
+        color: darkred;
+    }
+    #buttonice:active{
+        color: skyblue;
+    }
+    #display{
+        animation: mov 6s infinite alternate-reverse;
+    }
+    #display #span{
+        border: 1px solid red;
+      
+        width: 50px;
+        height: auto;
+        font-size:50px ;
+      /*  text-align: center;
+        padding-top: 60px;*/
+        border: none;
+        color: red;
+        animation: chancol 35s infinite;
+       
+    }
+    @keyframes chancol{
+        0%{color:red;}
+        50%{color: white;}
+        100%{color:rgb(24, 36, 210)}
+       }
+       @keyframes mov{
+        from{transform: translate(0,0);}
+        to{transform: translate(300px,0px);}
+       }
+    #display{
+        padding-left:  40%;
+        padding-top: 20px;
+    }
+    #span{
+        font-family: cursive;
+  
+
+    }
+    h1{
+        color: aliceblue;
+        animation: h11 4s infinite;
+    }
+    @keyframes h11{
+        0%{color: rgb(212, 57, 57);}
+        50%{color: white;}
+        100%{color: gold;}
+    }
+    #result{
+        color: black;
+        border-bottom: 1px solid red;
+        margin-left: 48%;
+        width: 50px;
+        border-radius: 30px;
+    }
+    #result:hover{
+        color: violet;
+        box-shadow: -2px 2px 5px salmon;
+    }
+    #reset{
+        color: red;
+        border-bottom: 1px solid red;
+        border-radius: 20px;
+    
+    }
+    
+</style>
+<body>
+    <h1>Let's throw the dice</h1>
+    <div id="display"><span id="span"><em></em></span></div>
+    <div id="con">
+     
+    
+        <img  id="image1" src="./img/fire1.png" alt=""><br>
+      
+        <img id="image2" src="./img/ice1.png" alt=""><br>
+       </div>
+       <div id="con2">
+        <button id="buttonfire">Player1 press</button>
+    
+        <button id="buttonice">Player2 press</button>
+       </div>
+       <button id="result">Check</button>
+      <input type="reset" value="reset" id="reset" >
+</body>
+<!--<script src="twodice.js"></script>
+<script src="two.js"></script>-->
+<script src="newtwoplayer.js"></script>
+</html>
